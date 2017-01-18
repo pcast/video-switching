@@ -1,0 +1,171 @@
+
+.mainvidsection {
+
+display: block;
+height: 50%;
+
+margin: auto;
+position: relative;
+padding-top:.5%;
+
+}
+
+
+#video-container {
+
+display: block;
+height: 100%;
+width: auto;
+position: relative;
+margin: auto;
+
+
+
+}
+
+#mainvidwrapper {
+
+z-index: 1;
+width: auto;
+display: block;
+height: 100%;
+position: relative;
+}
+
+
+
+
+#videoone {
+
+
+position: relative;
+height: auto;
+width: 60%;
+top: 0;
+margin: auto;
+display: block;
+
+}
+
+
+#video {
+
+
+position: absolute;
+height: 100%;
+width: auto;
+top: 0;
+margin: auto;
+display: block;
+position: absolute;
+height: auto;
+width: 60%;
+top: 0;
+margin: auto;
+right: 10%;
+left: 10%
+
+
+}
+
+#videoone:hover {
+
+  cursor:pointer;
+}
+
+#video:hover {
+
+  cursor:pointer;
+}
+
+
+
+/*vid controls css  */
+
+
+
+#video-controls {
+position: relative;
+width: 60%;
+display: block;
+margin: auto;
+background-color: lightgray;
+font-size: 1.5em;
+bottom: -5px;
+}
+
+
+content {
+  position:absolute;
+  top:0;left:0;right:0;bottom:0;
+  padding:.3em;margin:auto;
+  border-radius:100em;
+  box-shadow:0 0 1em 0 hsla(0,0%,0%,.3);
+  -o-box-shadow:0 0 1em 0 hsla(0,0%,0%,.3);
+  -moz-box-shadow:0 0 1em 0 hsla(0,0%,0%,.3);
+  -webkit-box-shadow:0 0 1em 0 hsla(0,0%,0%,.3);
+  display:block;
+  z-index:1;
+  font-size:1em;
+  font-weight:900;
+  line-height:.5em;
+  text-align:center;
+}
+
+
+content:before {
+  content:'•';
+  position:absolute;
+  top:-2em;left:0;right:0;
+  padding:0;margin:auto;
+  filter:blur(.05em);
+  -o-filter:blur(.05em);
+  -moz-filter:blur(.05em);
+  -webkit-filter:blur(.05em);
+  display:block;
+  opacity:.6;
+  font-size:5em;
+}
+
+
+content:after {
+  content:'•';
+  position:absolute;
+  bottom:-3em;left:0;right:0;
+  padding:0;margin:auto;
+  filter:blur(.05em);
+  -o-filter:blur(.05em);
+  -moz-filter:blur(.05em);
+  -webkit-filter:blur(.05em);
+  display:block;
+  opacity:.8;
+  font-size:5em;
+}
+
+#overlay {
+  top: 125px; 
+  position: absolute;
+  left: 480px;
+  display: none;
+  border-radius:25px;
+  z-index: 2;
+}
+
+/* beginning of media query font size changes */
+
+@media only screen and (min-width: 320px) { body { font-size: 45%;  } }
+@media only screen and (min-width: 400px) { body { font-size: 57%;  } }
+@media only screen and (min-width: 500px) { body { font-size: 65%;  } }
+@media only screen and (min-width: 550px) { body { font-size: 70;  } }
+@media only screen and (min-width: 600px) { body { font-size: 74%;  } }
+@media only screen and (min-width: 650px) { body { font-size: 79%; } }
+@media only screen and (min-width: 768px) { body { font-size: 86%;  } }
+@media only screen and (min-width: 850px) { body { font-size: 90%;  } }
+@media only screen and (min-width: 950px) { body { font-size: 95%;  } }
+@media only screen and (min-width: 1000px) { body { font-size: 100%;  } }
+@media only screen and (min-width: 1200px) { body { font-size: 110%;  } }
+@media only screen and (min-width: 1400px) { body { font-size: 120%;  } }
+@media only screen and (min-width: 1600px) { body { font-size: 130%;  } }
+@media only screen and (min-width: 1800px) { body { font-size: 140%;  } }
+
+

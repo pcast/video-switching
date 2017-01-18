@@ -1,0 +1,165 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Code Switching</title>
+  <meta name="description" content="Code Switching">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.js"></script>
+
+
+    <link href='http://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
+    <script src='http://use.edgefonts.net/creepster.js'></script>
+
+
+
+      <script type="text/javascript">
+
+          $(document).keypress(function(e){
+          var key = e.which;
+          if (key == 115) 
+
+          {
+              $('#video').toggle();  //this toggles video .toggle
+			  changeFlag();
+			  toggleFlag();
+			  changeOverlay();
+
+              var bool = $("#video").prop("muted");
+              $("#video").prop("muted",!bool);
+              
+              var bool = $("#videoone").prop("muted");
+              $("#videoone").prop("muted", !bool); 
+
+                  }
+
+              });
+
+
+
+			function codeSwitch(){
+			  changeFlag();
+			  toggleFlag();
+			  changeOverlay();
+              $('#video').toggle();  //this toggles video .toggle  
+			  
+
+              var bool = $("#video").prop("muted");
+              $("#video").prop("muted",!bool);
+              
+              var bool = $("#videoone").prop("muted");
+              $("#videoone").prop("muted", !bool);         
+                          
+              }			
+
+			
+			
+			function switchBack() {
+				setTimeout(function (){
+				codeSwitch();
+				}, 10000); 
+			}
+			function switchBack2() {
+				setTimeout(function (){
+				skip(-10);
+				codeSwitch();		
+				}, 10000); 
+			}
+ 
+			
+			function toggleFlag(){
+        		$("#overlay").fadeToggle(10);
+        		$("#overlay").fadeToggle(1500);
+        	}
+
+      </script> 
+
+
+
+  <link rel="stylesheet" href="farside.css">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+
+
+
+
+
+<body>
+
+<div class="wrapper">
+
+
+
+    
+    <div class="mainvidsection">
+<!-- 
+
+        <a href="#" class="play">
+          <div class="gotime">
+
+             <span>GO TIME ></span>
+
+          </div> 
+         </a>
+
+ -->
+
+
+
+
+                <div id="video-container">
+                  
+ 
+                  <div class="mainvidwrapper">
+                  <div><img id="overlay" src="germanDE.png" width="130" height="100"></div>
+
+                    <video muted preload="auto" id="videoone"> 
+
+                          <source  src="video4.mp4" type="video/mp4">
+                          <track src="solar_eng.srt" kind="subtitle" srclang="en" label="English" />
+
+
+                    </video> 
+
+                    <video preload="auto" id="video"> <!-- this one's one top, the main video or whatevs -->
+
+                          <source src="video5.mp4" type="video/mp4">
+                          <track src="solar_ger.srt" kind="subtitle" srclang="de" label="German" />
+
+
+                    </video>
+
+                        <!-- Video Controls -->
+                        <div id="video-controls">
+                          <input type="range" id="seek-bar" value="0">
+  
+						  <input type="image" src="unmute.png" id="mute" width="15" height="15"/>
+						  <input type="image" src="restart.png" id="restart" onclick="restart()" width="15" height="15"/>   						  
+						  <input type="image" src="back.png" id="rew" onclick="skip(-10)" width="15" height="15"/>   						  
+						  <input type="image" src="play.png" id="play-pause" width="15" height="15"/>   						  
+   						 
+    					  <input type="image" src="forward.png" id="fastFwd" onclick="skip(10)" width="15" height="15"/>
+    					  <input type="image" src="german.png" id="codeswitch" onclick="codeSwitch()" width="20" height="16"/>
+    					  <input type="image" src="rewind.png" id="flash" onclick="skip(-10);codeSwitch();switchBack2()" width="15" height="15"/>   					  
+                        </div>
+
+
+                  </div> 
+
+                </div>
+
+          </div>
+
+
+
+
+
+<script src="script.js">
+</script>
+</body>
+</html>
